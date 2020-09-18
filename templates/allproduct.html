@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}all products{% endblock %}
+{% block content %}
+<div class="container">
+<h3>all products </h3>
+{% for cat in categorys %}
+<h2>{{cat.title}}</h2>
+<div class="row">
+{% for product in cat.product_set.all %}
+<div class="col-md-4">
+
+<h1>{{product.title}}</h1>
+<img src="{{product.image.url}}">
+<p>Price:<strike> Rs. {{product.marked_price}}</strike> Rs. {{product.selling_price}}</p>
+<a href="" class="btn btn-primary">Add to Cart</a>
+</div>
+
+{% endfor %}
+</div>
+{% endfor %}
+</div>
+
+
+{% endblock %}

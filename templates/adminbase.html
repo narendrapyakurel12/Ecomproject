@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %} Admin Home{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	
+	<div class="container">
+		<a href="{% url 'ecomapp:adminhome' %}">Home</a> 
+		<a href="{% url 'ecomapp:adminorderlist' %}">All orders</a>
+	</div>
+	{% block content %}
+
+
+	{% endblock %}
+
+</body>
+</html>
